@@ -22,4 +22,4 @@ Answer: It communicates that the resource doesn’t exist and avoids confusion w
 
 Successful GET request to `/api/v1/dishes`:
 
-![GET Request Screenshot](./images/get-request.png)
+![GET Request Screenshot](./images/get-request.png.png)
