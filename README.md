@@ -1,4 +1,9 @@
+<<<<<<< HEAD
  # RESTful API Activity – Aaron Joshua Abalos
+=======
+
+# RESTful API Activity – Aaron Joshua Abalos
+>>>>>>> e0cba2e09c143d475ea54578aaeb740caf7a424b
 
 ## Best Practices Implementation
 
@@ -22,6 +27,7 @@ Answer: It communicates that the resource doesn’t exist and avoids confusion w
 Successful GET request to `/api/v1/dishes`:
 
 ![GET Request Screenshot](./images/get-request.png.png)
+<<<<<<< HEAD
 
 **Why did I choose to Embed the [Review/Tag/Log]?**
 Answer: When you fetch a transaction, you immediately get its reviews/tags without needing a second query.
@@ -31,3 +37,5 @@ Answer: If a user updates their email, you only change it in the User collection
 
 
 
+=======
+>>>>>>> e0cba2e09c143d475ea54578aaeb740caf7a424b
