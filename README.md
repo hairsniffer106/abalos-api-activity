@@ -32,4 +32,23 @@ Answer: When you fetch a transaction, you immediately get its reviews/tags witho
 Answer: If a user updates their email, you only change it in the User collection.
 
 
+# API Security Concepts
+
+## 1. Authentication vs Authorization
+- **Authentication**: Verifies *who* the user is. In our code, this happens during login when the system checks the email and password, then issues a JWT if valid.  
+- **Authorization**: Verifies *what* the authenticated user can do. In our code, the JWT includes the user’s role, and middleware checks this role before granting access to certain routes.
+
+---
+
+## 2. Security (bcrypt)
+We use **bcryptjs** to hash passwords before saving them in MongoDB.  
+- Plain text passwords are insecure if the database is compromised.  
+- Bcrypt adds a salt and multiple hashing rounds, making it computationally expensive to reverse.  
+- This ensures stolen hashes cannot easily be converted back into real passwords.
+
+---
+
+## 3. JWT Structure
+it checks the token’s validity, identifies the user, and ensures only authenticated requests can access protected routes.
+
 
