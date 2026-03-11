@@ -1,8 +1,11 @@
-<<<<<<< HEAD
 const express = require('express');
 const dotenv = require('dotenv');
 const connectDB = require('./src/config/db');
 const apiRoutes = require('./src/routes/apiRoutes');
+const transactionRoutes = require('./src/routes/transactionRoutes');
+const authRoutes = require('./src/routes/authRoutes');
+
+
 
 dotenv.config();
 const app = express();
@@ -17,6 +20,8 @@ const PORT = process.env.PORT || 3000;
 const BASE_URI = '/api/v1';
 
 app.use(BASE_URI, apiRoutes);
+app.use('/api/v1/transactions', transactionRoutes);
+app.use('/api/v1/auth', authRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
@@ -25,22 +30,3 @@ app.listen(PORT, () => {
 
 
 
-=======
-require('dotenv').config();
-const express = require('express');
-const app = express();
-
-app.use(express.json());
-
-const PORT = process.env.PORT || 3000;
-const BASE_URI = process.env.BASE_URI || '/api/v1';
-
-
-const apiRoutes = require('./src/routes/apiRoutes');
-app.use(BASE_URI, apiRoutes);
-
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-    console.log(`Base URI:http://localhost:${PORT} ${BASE_URI}`);
-});
->>>>>>> e0cba2e09c143d475ea54578aaeb740caf7a424b
